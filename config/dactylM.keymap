@@ -8,17 +8,17 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
+// #include <dt-bindings/zmk/bt.h>
 
 
 
-#define DEFAULT 0
-#define Movement 1
-#define NumPad 2
-#define Macro 3
-#define Mouse 4
+// #define DEFAULT 0
+// #define Movement 1
+// #define NumPad 2
+// #define Macro 3
+// #define Mouse 4
 
-#define AS(keycode) &as LS(keycode) keycode
+// #define AS(keycode) &as LS(keycode) keycode
 
 / {
         // behaviors {
@@ -39,15 +39,15 @@
 
         default_layer {
             bindings = <
-&kp B        &kp N1  &kp N2   &kp N3   &kp N4    &kp N5 &bt BT_CLR        &bt BT_CLR  &kp N6 &kp N7    &kp N8    &kp N9       &kp N0     &kp EQUAL
-&kp TAB      &kp Q   &kp W    &kp E    &kp R     &kp T  &kp T             &kp Y   &kp Y  &kp U     &kp I     &kp O        &kp P      &kp MINUS
-&kp ESC      &kp A   &kp S    &kp D    &kp F     &kp G  &kp G             &kp H   &kp H  &kp J     &kp K     &kp L        &kp SEMI   &kp SQT
-&kp LSHFT    &kp Z   &kp X    &kp C    &kp V     &kp B                            &kp N  &kp M     &kp COMMA &kp DOT      &kp FSLH   &kp RSHFT
-&kp A        &kp B   &kp C    &kp D                                                          &kp T     &kp X        &kp Y      &kp Z
+&kp B         &kp 1        &kp 2        &kp 3        &kp 4         &kp 5      &bt BT_CLR            &bt BT_CLR    &kp 6        &kp 7        &kp 8        &kp 9        &kp 0         &kp EQUAL
+&kp TAB       &kp Q        &kp W        &kp E        &kp R         &kp T      &kp T                 &kp Y         &kp Y        &kp U        &kp I        &kp O        &kp P         &kp MINUS
+&kp ESC       &kp A        &kp S        &kp D        &kp F         &kp G      &kp G                 &kp H         &kp H        &kp J        &kp K        &kp L        &kp SEMI      &kp SQT
+&mt LSHFT (   &kp Z        &kp X        &kp C        &kp V         &kp B                                          &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH      &mt RSHFT )
+&kp A         &kp B        &kp C        &kp D                                                                                               &kp T        &kp X        &kp Y         &bt BT_CLR 
 
-                                   &kp A   &kp N2                       &kp A  &kp B
-                                   &kp N3  &kp N4                       &kp C  &kp D
-                                   &kp N5  &kp N6                       &kp E  &kp F
+                                                                   &kp A      &kp N2                &kp A      &kp B
+                                                                   &kp N3     &kp N4                &kp C      &kp D
+                                                                   &kp N5     &kp N6                &kp E      &kp F
             >;
         };
 

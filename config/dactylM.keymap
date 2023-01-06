@@ -48,14 +48,15 @@
 //                            | Lyr4 | Lyr1  |                   | Lyr2  | Lyr3  |
 //                            | LEFT | DOWN  |                   | UP    | RIGHT |
             bindings = <
-&kp ESC   AS(N1) AS(N2)   AS(N3)   AS(N4)    AS(N5)                      AS(N6) AS(N7)    AS(N8)    AS(N9)   AS(N0)   AS(EQUAL)
-AS(TAB)   AS(Q)  AS(W)    AS(E)    AS(R)     AS(T)                       AS(Y)  AS(U)     AS(I)     AS(O)    AS(P)    AS(MINUS)
-&kp LCTRL AS(A)  AS(S)    AS(D)    AS(F)     AS(G)                       AS(H)  AS(J)     AS(K)     AS(L)    AS(SEMI) AS(SQT)
-&kp LSHFT AS(Z)  AS(X)    AS(C)    AS(V)     AS(B)                       AS(N)  AS(M)     AS(COMMA) AS(DOT)  AS(FSLH) AS(BSLH)
-                 &kp LGUI &kp LALT                                                        &kp RALT  &kp K_CMENU
-                                    &kp DELETE  &kp BSPC                &kp SPACE     &kp ENTER
-                                    &tog 1      &mo 1                    &mo 2  &mo 3 
-                                    &kp LEFT &kp DOWN                    &kp UP  &kp RIGHT  
+&kp ESC   AS(N1) AS(N2)   AS(N3)   AS(N4)    AS(N5)                      AS(N6) AS(N7)    AS(N8)    AS(N9)       AS(N0)     AS(EQUAL)
+AS(TAB)   AS(Q)  AS(W)    AS(E)    AS(R)     AS(T)                       AS(Y)  AS(U)     AS(I)     AS(O)        AS(P)      AS(MINUS)
+&kp LCTRL AS(A)  AS(S)    AS(D)    AS(F)     AS(G)                       AS(H)  AS(J)     AS(K)     AS(L)        AS(SEMI)   AS(SQT)
+&kp LSHFT AS(Z)  AS(X)    AS(C)    AS(V)     AS(B)                       AS(N)  AS(M)     AS(COMMA) AS(DOT)      AS(FSLH)   AS(BSLH)
+&kp LCTRL AS(A)  &kp LGUI &kp LALT                                                        &kp RALT  &kp K_CMENU  &bt BT_CLR &bt BT_CLR  
+
+                                    &kp DELETE  &kp BSPC                &kp SPACE   &kp ENTER
+                                    &tog 1      &mo 1                   &mo 2       &mo 3 
+                                    &kp LEFT    &kp DOWN                &kp UP      &kp RIGHT  
             >;
         };
 
@@ -71,8 +72,8 @@ AS(TAB)   AS(Q)  AS(W)    AS(E)    AS(R)     AS(T)                       AS(Y)  
 AS(GRAVE)   AS(N1)     AS(N2)    AS(N3)    AS(N4) AS(N5)                  AS(N6)   AS(N7)    AS(N8)    AS(LBKT)     AS(RBKT)   &none
 &kp GRAVE   AS(Q)      AS(W)     &kp K_VOL_DN &kp K_VOL_UP  &kp K_MUTE                   AS(Y)    AS(U)     AS(I)     AS(O)      AS(P)    &kp BSPC
 &kp LCTRL   &kp LC(A)  &kp LC(S) &kp LC(D) AS(F)  AS(G)                   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT AS(SEMI) &kp SQT
-&bt BT_CLR  &kp LC(Z)  &kp LC(X) &kp LC(C) AS(V)  AS(B)                   &kp HOME &kp PG_DN &kp PG_UP &kp END    AS(FSLH) &bt BT_CLR
-                       &kp LGUI  &kp LALT                                                    &kp RALT  &caps_word
+&bt BT_CLR  &kp LC(Z)  &kp LC(X) &kp LC(C) AS(V)  AS(B)                   &kp HOME &kp PG_DN &kp PG_UP &kp END   AS(FSLH) &bt BT_CLR
+&kp LGUI    &kp LALT   &kp LGUI  &kp LALT                                                    &kp RALT  &caps_word  &kp RALT  &caps_word 
                                    &kp DELETE  &kp BSPC                   &kp SPACE &kp ENTER
                                    &tog 1       &mo 1                      &mo 2  &mo 3 
                                    &kp LEFT    &kp DOWN                   &kp UP  &kp RIGHT         

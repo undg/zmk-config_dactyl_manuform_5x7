@@ -34,7 +34,7 @@
 
                                                                 &mt LWIN ENTER  &kp SPACE               &kp SPACE       &mt RWIN ENTER 
                                                                 &kp DEL         &mt LCTRL BSPC          &mt RCTRL BSPC  &kp DEL
-                                                                &kp LALT        &kp 6                   &kp LALT        &kp LALT
+                                                                &kp LALT        &kp SPACE               &kp LALT        &kp LALT
             >;
         };
 

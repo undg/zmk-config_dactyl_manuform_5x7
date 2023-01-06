@@ -18,36 +18,23 @@
 // #define Macro 3
 // #define Mouse 4
 
-// #define AS(keycode) &as LS(keycode) keycode
 
 / {
-        // behaviors {
-        //     as: auto_shift {
-        //         compatible = "zmk,behavior-hold-tap";
-        //         label = "AUTO_SHIFT";
-        //         #binding-cells = <2>;
-        //         tapping_term_ms = <200>;
-        //         quick_tap_ms = <10>;
-        //         flavor = "tap-preferred";
-        //         bindings = <&kp>, <&kp>;
-        //     };
-        // };
-        
-        
     keymap {
         compatible = "zmk,keymap";
 
+        // https://zmk.dev/docs/codes
         default_layer {
             bindings = <
-&kp B         &kp 1        &kp 2        &kp 3        &kp 4         &kp 5      &bt BT_CLR            &bt BT_CLR    &kp 6        &kp 7        &kp 8        &kp 9        &kp 0         &kp EQUAL
-&kp TAB       &kp Q        &kp W        &kp E        &kp R         &kp T      &kp T                 &kp Y         &kp Y        &kp U        &kp I        &kp O        &kp P         &kp MINUS
-&kp ESC       &kp A        &kp S        &kp D        &kp F         &kp G      &kp G                 &kp H         &kp H        &kp J        &kp K        &kp L        &kp SEMI      &kp SQT
-&mt LSHFT (   &kp Z        &kp X        &kp C        &kp V         &kp B                                          &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH      &mt RSHFT )
-&kp A         &kp B        &kp C        &kp D                                                                                               &kp T        &kp X        &kp Y         &bt BT_CLR 
+&kp ESC          &kp 1        &kp 2        &kp 3        &kp 4         &kp 5      &bt BT_CLR            &bt BT_CLR    &kp 6        &kp 7        &kp 8        &kp 9        &kp 0         &kp EQUAL
+&kp TAB          &kp Q        &kp W        &kp E        &kp R         &kp T      &kp LBRC              &kp RBRC      &kp Y        &kp U        &kp I        &kp O        &kp P         &kp MINUS
+&kp ESC          &kp A        &kp S        &kp D        &kp F         &kp G      &kp G                 &kp H         &kp H        &kp J        &kp K        &kp L        &kp SEMI      &kp SQT
+&mt LSHFT LPAR   &kp Z        &kp X        &kp C        &kp V         &kp B                                          &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH      &mt RSHFT LPAR
+&kp A            &kp B        &kp C        &kp D                                                                                               &kp T        &kp X        &kp Y         &bt BT_CLR 
 
-                                                                   &kp A      &kp N2                &kp A      &kp B
-                                                                   &kp N3     &kp N4                &kp C      &kp D
-                                                                   &kp N5     &kp N6                &kp E      &kp F
+                                                                &mt LWIN ENTER  &kp SPACE               &kp SPACE       &mt RWIN ENTER 
+                                                                &kp DEL         &mt LCTRL BSPC          &mt RCTRL BSPC  &kp DED
+                                                                &kp LALT        &kp 6                   &kp LALT        &kp LALT
             >;
         };
 

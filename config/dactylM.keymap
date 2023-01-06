@@ -12,10 +12,10 @@
 
 
 #define DEFAULT 0
-#define MOVE 1
-#define NPAD 2
-// #define Macro 3
-// #define Mouse 4
+#define Movement 1
+#define NumPad 2
+#define Macro 3
+#define Mouse 4
 
 / {
     keymap {
@@ -36,7 +36,7 @@
             >;
         };
 
-        movement_layer {
+        lower_layer {
            bindings = <
 &trans           &trans         &trans       &trans       &trans        &trans       &trans               &trans          &trans        &trans        &trans        &trans       &trans         &trans
 &trans           &trans         &trans       &trans       &trans        &trans       &trans               &trans          &trans        &trans        &trans        &trans       &trans         &trans
@@ -51,7 +51,7 @@
 
         };
 
-        num_pad_layer {
+        raise_layer {
            bindings = <
 &trans           &trans         &trans       &trans       &trans        &trans       &trans               &trans          &trans        &trans        &trans        &trans       &trans         &trans
 &trans           &trans         &trans       &trans       &trans        &trans       &trans               &trans          &trans        &trans        &trans        &trans       &trans         &trans

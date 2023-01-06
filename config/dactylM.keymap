@@ -39,12 +39,12 @@
 
         default_layer {
             bindings = <
-AS(N1)   AS(N1) AS(N2)   AS(N3)   AS(N4)    AS(N5) AS(N6)        AS(N6) AS(N6) AS(N7)    AS(N8)    AS(N9)       AS(N0)     AS(EQUAL)
+AS(B)   AS(N1) AS(N2)   AS(N3)   AS(N4)    AS(N5) AS(N6)        AS(N6) AS(N6) AS(N7)    AS(N8)    AS(N9)       AS(N0)     AS(EQUAL)
 AS(Q)    AS(Q)  AS(W)    AS(E)    AS(R)     AS(T)  AS(T)         AS(Y)  AS(Y)  AS(U)     AS(I)     AS(O)        AS(P)      AS(MINUS)
 AS(A)    AS(A)  AS(S)    AS(D)    AS(F)     AS(G)  AS(G)         AS(H)  AS(H)  AS(J)     AS(K)     AS(L)        AS(SEMI)   AS(SQT)
 AS(Z)    AS(Z)  AS(X)    AS(C)    AS(V)     AS(B)                       AS(N)  AS(M)     AS(COMMA) AS(DOT)      AS(FSLH)   AS(BSLH)
 AS(A)    AS(B)  AS(C)    AS(D)                                                           AS(T)     AS(X)        AS(Y)      AS(Z)
-                                   AS(N1)  AS(N2)                       AS(A)  AS(B)
+                                   AS(A)  AS(N2)                       AS(A)  AS(B)
                                    AS(N3)  AS(N4)                       AS(C)  AS(D)
                                    AS(N5)  AS(N6)                       AS(E)  AS(F)
             >;

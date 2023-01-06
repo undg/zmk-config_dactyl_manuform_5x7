@@ -11,13 +11,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 
-
-#define DEFAULT 0
-#define Movement 1
-#define NumPad 2
-#define Macro 3
-#define Mouse 4
-
+// #define DEFAULT 0
+// #define Movement 1
+// #define NumPad 2
+// #define Macro 3
+// #define Mouse 4
 
 / {
     keymap {
@@ -26,42 +24,42 @@
         // https://zmk.dev/docs/codes
         default_layer {
             bindings = <
-&kp ESC          &kp 1        &kp 2        &kp 3        &kp 4         &kp 5      &bt BT_CLR            &bt BT_CLR    &kp 6        &kp 7        &kp 8        &kp 9        &kp 0         &kp EQUAL
-&kp TAB          &kp Q        &kp W        &kp E        &kp R         &kp T      &kp LBRC              &kp RBRC      &kp Y        &kp U        &kp I        &kp O        &kp P         &kp MINUS
-&kp ESC          &kp A        &kp S        &kp D        &kp F         &kp G      &kp Q                 &kp H         &kp H        &kp J        &kp K        &kp L        &kp SEMI      &kp SQT
+&kp ESC          &kp 1        &kp 2        &kp 3        &kp 4         &kp 5      &bt BSLH              &bt GRAVE     &kp 6        &kp 7        &kp 8        &kp 9        &kp 0         &kp EQUAL
+&kp TAB          &kp Q        &kp W        &kp E        &kp R         &kp T      &kp LBKT              &kp RBKT      &kp Y        &kp U        &kp I        &kp O        &kp P         &kp MINUS
+&kp ESC          &kp A        &kp S        &kp D        &kp F         &kp G      &kp LBRC              &kp RBRC      &kp H        &kp J        &kp K        &kp L        &kp SEMI      &kp APOS
 &mt LSHFT LPAR   &kp Z        &kp X        &kp C        &kp V         &kp B                                          &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH      &mt RSHFT LPAR
-&kp A            &kp B        &kp C        &kp D                                                                                               &kp T        &kp X        &kp Y         &bt BT_CLR 
+&mt LALT F12     &kp F5       &kp DEL      &kp F11                                                                                             &kp T        &kp X        &kp Y         &bt BT_CLR 
 
                                                                 &mt LWIN ENTER  &kp SPACE               &kp SPACE       &mt RWIN ENTER 
                                                                 &kp DEL         &mt LCTRL BSPC          &mt RCTRL BSPC  &kp DEL
-                                                                &kp LALT        &kp A                   &kp LALT        &kp LALT
+                                                                &kp LALT        &kp N1                  &kp LALT        &kp LALT
             >;
         };
 
-//         lower_layer {
-//            bindings = <
-// AS(GRAVE)   AS(N1)     AS(N2)    AS(N3)    AS(N4) AS(N5)                  AS(N6)   AS(N7)    AS(N8)    AS(LBKT)     AS(RBKT)   &none
-// &kp GRAVE   AS(Q)      AS(W)     &kp K_VOL_DN &kp K_VOL_UP  &kp K_MUTE                   AS(Y)    AS(U)     AS(I)     AS(O)      AS(P)    &kp BSPC
-// &kp LCTRL   &kp LC(A)  &kp LC(S) &kp LC(D) AS(F)  AS(G)                   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT AS(SEMI) &kp SQT
-// &bt BT_CLR  &kp LC(Z)  &kp LC(X) &kp LC(C) AS(V)  AS(B)                   &kp HOME &kp PG_DN &kp PG_UP &kp END   AS(FSLH) &bt BT_CLR
-// &kp LGUI    &kp LALT   &kp LGUI  &kp LALT                                                    &kp RALT  &caps_word  &kp RALT  &caps_word 
-//                                    &kp DELETE  &kp BSPC                   &kp SPACE &kp ENTER
-//                                    &tog 1       &mo 1                      &mo 2  &mo 3 
-//                                    &kp LEFT    &kp DOWN                   &kp UP  &kp RIGHT         
-//             >;
-//
-//         };
+        lower_layer {
+           bindings = <
+AS(GRAVE)   AS(N1)     AS(N2)    AS(N3)    AS(N4) AS(N5)                  AS(N6)   AS(N7)    AS(N8)    AS(LBKT)     AS(RBKT)   &none
+&kp GRAVE   AS(Q)      AS(W)     &kp K_VOL_DN &kp K_VOL_UP  &kp K_MUTE                   AS(Y)    AS(U)     AS(I)     AS(O)      AS(P)    &kp BSPC
+&kp LCTRL   &kp LC(A)  &kp LC(S) &kp LC(D) AS(F)  AS(G)                   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT AS(SEMI) &kp SQT
+&bt BT_CLR  &kp LC(Z)  &kp LC(X) &kp LC(C) AS(V)  AS(B)                   &kp HOME &kp PG_DN &kp PG_UP &kp END   AS(FSLH) &bt BT_CLR
+&kp LGUI    &kp LALT   &kp LGUI  &kp LALT                                                    &kp RALT  &caps_word  &kp RALT  &caps_word 
+                                   &kp DELETE  &kp BSPC                   &kp SPACE &kp ENTER
+                                   &tog 1       &mo 1                      &mo 2  &mo 3 
+                                   &kp LEFT    &kp DOWN                   &kp UP  &kp RIGHT         
+            >;
 
-//         raise_layer {
-//            bindings = <
-// &kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                      &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &none
-// &kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                       &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSPC
-// &kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                       &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-// &kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B                       &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-//                  &kp LGUI &kp LALT &kp LCTRL &mo 1                       &mo 2  &kp RCTRL &kp RALT  &kp RGUI
-//                  &kp LGUI &kp LALT &kp LCTRL &mo 1                       &mo 2  &kp RCTRL &kp RALT  &kp RGUI                 
-//             >;
-//
-//         };
+        };
+
+        raise_layer {
+           bindings = <
+&kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                      &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &none
+&kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                       &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSPC
+&kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                       &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
+&kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B                       &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+                 &kp LGUI &kp LALT &kp LCTRL &mo 1                       &mo 2  &kp RCTRL &kp RALT  &kp RGUI
+                 &kp LGUI &kp LALT &kp LCTRL &mo 1                       &mo 2  &kp RCTRL &kp RALT  &kp RGUI                 
+            >;
+
+        };
     };
 };

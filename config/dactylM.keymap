@@ -33,7 +33,7 @@
 &kp A            &kp B        &kp C        &kp D                                                                                               &kp T        &kp X        &kp Y         &bt BT_CLR 
 
                                                                 &mt LWIN ENTER  &kp SPACE               &kp SPACE       &mt RWIN ENTER 
-                                                                &kp DEL         &mt LCTRL BSPC          &mt RCTRL BSPC  &kp DED
+                                                                &kp DEL         &mt LCTRL BSPC          &mt RCTRL BSPC  &kp DEL
                                                                 &kp LALT        &kp 6                   &kp LALT        &kp LALT
             >;
         };

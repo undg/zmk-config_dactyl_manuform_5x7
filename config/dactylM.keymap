@@ -12,11 +12,11 @@
 
 
 
-// #define DEFAULT 0
-// #define Movement 1
-// #define NumPad 2
-// #define Macro 3
-// #define Mouse 4
+#define DEFAULT 0
+#define Movement 1
+#define NumPad 2
+#define Macro 3
+#define Mouse 4
 
 
 / {
@@ -28,7 +28,7 @@
             bindings = <
 &kp ESC          &kp 1        &kp 2        &kp 3        &kp 4         &kp 5      &bt BT_CLR            &bt BT_CLR    &kp 6        &kp 7        &kp 8        &kp 9        &kp 0         &kp EQUAL
 &kp TAB          &kp Q        &kp W        &kp E        &kp R         &kp T      &kp LBRC              &kp RBRC      &kp Y        &kp U        &kp I        &kp O        &kp P         &kp MINUS
-&kp ESC          &kp A        &kp S        &kp D        &kp F         &kp G      &kp G                 &kp H         &kp H        &kp J        &kp K        &kp L        &kp SEMI      &kp SQT
+&kp ESC          &kp A        &kp S        &kp D        &kp F         &kp G      &kp Q                 &kp H         &kp H        &kp J        &kp K        &kp L        &kp SEMI      &kp SQT
 &mt LSHFT LPAR   &kp Z        &kp X        &kp C        &kp V         &kp B                                          &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH      &mt RSHFT LPAR
 &kp A            &kp B        &kp C        &kp D                                                                                               &kp T        &kp X        &kp Y         &bt BT_CLR 
 

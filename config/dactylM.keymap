@@ -39,15 +39,15 @@
 
         default_layer {
             bindings = <
-AS(B)        AS(N1)  AS(N2)   AS(N3)   AS(N4)    AS(N5) &bt BT_CLR        &bt BT_CLR  AS(N6) AS(N7)    AS(N8)    AS(N9)       AS(N0)     AS(EQUAL)
-&kp TAB      AS(Q)   AS(W)    AS(E)    AS(R)     AS(T)  AS(T)             AS(Y)   AS(Y)  AS(U)     AS(I)     AS(O)        AS(P)      AS(MINUS)
-&kp ESC      AS(A)   AS(S)    AS(D)    AS(F)     AS(G)  AS(G)             AS(H)   AS(H)  AS(J)     AS(K)     AS(L)        AS(SEMI)   AS(SQT)
-&kp LSHFT    AS(Z)   AS(X)    AS(C)    AS(V)     AS(B)                            AS(N)  AS(M)     AS(COMMA) AS(DOT)      AS(FSLH)   &kp RSHFT
-AS(A)        AS(B)   AS(C)    AS(D)                                                            AS(T)     AS(X)        AS(Y)      AS(Z)
+&kp B        &kp N1  &kp N2   &kp N3   &kp N4    &kp N5 &bt BT_CLR        &bt BT_CLR  &kp N6 &kp N7    &kp N8    &kp N9       &kp N0     &kp EQUAL
+&kp TAB      &kp Q   &kp W    &kp E    &kp R     &kp T  &kp T             &kp Y   &kp Y  &kp U     &kp I     &kp O        &kp P      &kp MINUS
+&kp ESC      &kp A   &kp S    &kp D    &kp F     &kp G  &kp G             &kp H   &kp H  &kp J     &kp K     &kp L        &kp SEMI   &kp SQT
+&kp LSHFT    &kp Z   &kp X    &kp C    &kp V     &kp B                            &kp N  &kp M     &kp COMMA &kp DOT      &kp FSLH   &kp RSHFT
+&kp A        &kp B   &kp C    &kp D                                                          &kp T     &kp X        &kp Y      &kp Z
 
-                                   AS(A)   AS(N2)                       AS(A)  AS(B)
-                                   AS(N3)  AS(N4)                       AS(C)  AS(D)
-                                   AS(N5)  AS(N6)                       AS(E)  AS(F)
+                                   &kp A   &kp N2                       &kp A  &kp B
+                                   &kp N3  &kp N4                       &kp C  &kp D
+                                   &kp N5  &kp N6                       &kp E  &kp F
             >;
         };
 

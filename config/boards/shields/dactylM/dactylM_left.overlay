@@ -7,6 +7,10 @@
 
 #include "dactylM.dtsi"
 
+
+
+
+
 &kscan0 {
 	col-gpios
 		= <&pro_micro 10 GPIO_ACTIVE_HIGH>

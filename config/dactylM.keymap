@@ -17,6 +17,20 @@
 
 / {
     behaviors {
+        ctrl_bspc: tap_dance_ctrl_bspc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_MOD_TAP_CTRL_BSPC";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LCTRL BSPC>, <&kp BSPC>;
+        };
+        lt_1_del: tap_dance_lt_del {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_MOD_TAP";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt 1 DEL>, <&kp DEL>;
+        };
     };
     // https://zmk.dev/docs/codes
     keymap {
@@ -30,8 +44,8 @@
 &mt LSHFT LPAR &kp Z         &kp X         &kp C         &kp V         &kp B                                                 &kp N         &kp M         &kp COMMA     &kp DOT        &kp FSLH       &mt LSHFT RPAR
 &mt RALT F12   &kp F5        &bt BT_CLR    &kp F11                                                                                                       &kp F2        &bt BT_CLR     &kp F7         &kp F8
                                                                 &mt RWIN ENTER  &kp SPACE                        &kp SPACE       &mt RWIN ENTER
-                                                                &lt 1 DEL       &mt RCTRL BSPC                   &mt RCTRL BSPC  &lt 1 DEL
-                                                                &kp RALT        &kp RCTRL                        &kp RALT        &kp RALT
+                                                                &lt_1_del       &ctrl_bspc                       &ctrl_bspc      &lt_1_del
+                                                                &kp RALT        &kp mt 2                         &kp mt 2        &kp RALT
             >;
         };
 

@@ -8,8 +8,8 @@
 # board: [ "nice_nano_v2" ]
 include:
  - board: nice_nano_v2
-   shield: left
+   shield: dactylM_left
  - board: nice_nano_v2
-   shield: right
+   shield: dactylM_right
  # - board: nice_nano_v2
    # shield: settings_reset

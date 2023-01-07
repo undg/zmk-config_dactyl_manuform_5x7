@@ -1,5 +1,4 @@
 /*
- * vim: ft=cpp
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -24,15 +23,15 @@
         // https://zmk.dev/docs/codes
         default_layer {
             bindings = <
-&kp ESC          &kp 1          &kp 2        &kp 3        &kp 4         &kp 5       &bt BT_CLR            &bt BT_CLR      &kp 6         &kp 7         &kp 8         &kp 9         &kp 0          &kp EQUAL
+&kp ESC          &kp 1          &kp 2        &kp 3        &kp 4         &kp 5       &bt BSLH              &bt GRAVE       &kp 6         &kp 7         &kp 8         &kp 9         &kp 0          &kp EQUAL
 &kp TAB          &kp Q          &kp W        &kp E        &kp R         &kp T       &kp LBRC              &kp RBRC        &kp Y         &kp U         &kp I         &kp O         &kp P          &kp MINUS
 &kp ESC          &kp A          &kp S        &kp D        &kp F         &kp G       &kp Q                 &kp H           &kp H         &kp J         &kp K         &kp L         &kp SEMI       &kp SQT
 &mt LSHFT LPAR   &kp Z          &kp X        &kp C        &kp V         &kp B                                             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH       &mt RSHFT LPAR
 &mt LALT F12     &kp F5         &kp DEL      &kp F11                                                                                                  &kp T         &kp X         &kp Y          &bt BT_CLR 
 
                                                                 &mt LWIN ENTER  &kp SPACE               &kp SPACE       &mt RWIN ENTER 
-                                                                &kp DEL         &mt LCTRL BSPC          &mt RCTRL BSPC  &kp DEL
-                                                                &kp LALT        &kp N1                  &kp LALT        &kp LALT
+                                                                &kp DEL         &mt LCTRL BSPC          &mt RCTRL BSPC  &mt LCTRL BSPC
+                                                                &kp LALT        &kp I                   &kp LALT        &kp LALT
 
 // &kp ESC          &kp 1          &kp 2        &kp 3        &kp 4         &kp 5       &bt BSLH              &bt GRAVE       &kp 6         &kp 7         &kp 8         &kp 9         &kp 0          &kp EQUAL
 // &kp TAB          &kp Q          &kp W        &kp E        &kp R         &kp T       &kp LBKT              &kp RBKT        &kp Y         &kp U         &kp I         &kp O         &kp P          &kp MINUS

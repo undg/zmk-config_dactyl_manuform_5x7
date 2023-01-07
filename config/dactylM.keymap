@@ -43,7 +43,7 @@
 &kp TAB        &kp Q         &kp W         &kp E         &kp R         &kp T         &kp LBRC                &kp RBRC        &kp Y         &kp U         &kp I         &kp O         &kp P          &kp MINUS
 &kp ESC        &kp A         &kp S         &kp D         &kp F         &kp G         &kp LBRC                &kp RBRC        &kp H         &kp J         &kp K         &kp L         &kp SEMI       &kp APOS
 &mt LSHFT LPAR &kp Z         &kp X         &kp C         &kp V         &kp B                                                 &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH       &mt LSHFT RPAR
-&mt RALT F12   &kp F5        &bt BT_CLR    &kp F11                                                                                                       &kp F2        &bt BT_CLR    &kp F7         &kp 99999887iF8
+&mt RALT F12   &kp F5        &bt BT_CLR    &kp F11                                                                                                       &kp F2        &bt BT_CLR    &kp F7         &kp F8
 
                                                                 &mt RWIN ENTER  &kp SPACE                        &kp SPACE       &mt RWIN ENTER
                                                                 &lt 1 DEL       &mt RCTRL BSPC                   &mt RCTRL BSPC  &lt 1 DEL

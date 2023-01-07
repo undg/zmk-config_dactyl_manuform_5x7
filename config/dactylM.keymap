@@ -24,13 +24,13 @@
             tapping-term-ms = <200>;
             bindings = <&mt LCTRL BSPC>, <&kp BSPC>;
         };
-        lt_1_del: tap_dance_lt_del {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MOD_TAP";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&lt 1 DEL>, <&kp DEL>;
-        };
+        // lt_1_del: tap_dance_lt_del {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     label = "TAP_DANCE_MOD_TAP";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&lt 1 DEL>, <&kp DEL>;
+        // };
     };
     // https://zmk.dev/docs/codes
     keymap {

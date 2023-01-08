@@ -45,7 +45,7 @@
 &mt RALT F12   &kp F5        &bt BT_CLR    &kp F11                                                                                                       &kp F2        &bt BT_CLR     &kp F7         &kp F8
                                                                 &mt RWIN ENTER  &kp SPACE                        &kp SPACE       &mt RWIN ENTER
                                                                 &lt1_del        &ctrl_bspc                       &ctrl_bspc      &lt1_del 
-                                                                &kp RALT        &mo 2                            &mo 2           &kp RALT
+                                                                &kp RALT        &mo 3                            &mo 3           &kp RALT
             >;
         };
 

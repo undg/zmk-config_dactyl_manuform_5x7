@@ -4,7 +4,7 @@
 if SHIELD_DACTYLM_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "DactylM"
+	default "Dactyl manuform"
 
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y

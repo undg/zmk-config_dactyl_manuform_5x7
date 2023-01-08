@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+ rm _fw/*
+ gh run download -n firmware --dir _fw
+

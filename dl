@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+ rm _fw/*
+ gh run download -n firmware --dir _fw
+
+ cp _fw/dactylM_left-nice_nano_v2-zmk.uf2 /mnt/media/undg/NICENANO/
+

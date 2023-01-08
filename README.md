@@ -1,7 +1,7 @@
 # Dactyl manuform 5x7 
 
 board: nice!nano v2
-fw: zmk-config for 
+fw: zmk
 
 ![PXL_20230107_214528412](https://user-images.githubusercontent.com/5306983/211172174-6993e698-1c7f-4130-bf39-21d137ffdcb6.jpg)
 

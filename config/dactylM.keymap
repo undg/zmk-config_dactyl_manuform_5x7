@@ -16,25 +16,27 @@
 
 / {
     behaviors {
+        // @TODO (undg) 2023-01-15: Investigate annoying ms wait/delay in tap dance.
+        //                          I want it as follow - hold: hold KEY1; tap: press KEY2; tap-tap: hold KEY2;
         tdbsp: tap_dance_bspc {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
             bindings = <&mt LCTRL BSPC>, <&kp BSPC>;
         };
         tdenter: tap_dance_enter {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
             bindings = <&mt RWIN ENTER>, <&kp ENTER>;
         };
         tddel: tap_dance_del {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_2";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
             bindings = <&lt 1 DEL>, <&kp DEL>;
         };
     };
@@ -48,10 +50,10 @@
 &kp TAB        &kp Q         &kp W         &kp E         &kp R         &kp T         &kp LBKT               &kp RBKT        &kp Y         &kp U         &kp I         &kp O           &kp P          &kp MINUS
 &kp ESC        &kp A         &kp S         &kp D         &kp F         &kp G         &kp LBRC               &kp RBRC        &kp H         &kp J         &kp K         &kp L           &kp SEMI       &kp APOS
 &mt LSHFT LPAR &kp Z         &kp X         &kp C         &kp V         &kp B                                                &kp N         &kp M         &kp COMMA     &kp DOT         &kp SLASH      &mt LSHFT RPAR
-&mt RALT F12   &kp F5        &kp F11       &kp F11                                                                                                      &kp F2        &kp F3          &kp F9         &kp F10
-                                                                &tdenter        &kp SPACE                        &kp SPACE      &tdenter
-                                                                &tddel          &tdbsp                           &tdbsp         &tddel
-                                                                &kp RALT        &mo 2                            &mo 2          &kp RALT
+&mt RALT F12   &kp F5        &kp BSPC      &kp F11                                                                                                      &kp F2        &kp F3          &kp F9         &kp F10
+                                                                &mt RWIN ENTER  &kp SPACE                        &kp SPACE      &mt RWIN ENTER
+                                                                &lt 1 DEL       &mt LCTRL BSPC                   &mt LCTRL BSPC &lt 1 DEL
+                                                                &kp RALT        &lt 2 BSPC                       &lt 2 BSPC     &kp RALT
             >;
         };
 
@@ -63,7 +65,7 @@
 &trans         &trans        &kp END       &trans        &kp PG_DN     &trans                                               &trans        &trans        &trans        &trans          &trans         &trans
 &trans         &trans        &trans        &trans                                                                                                       &kp C_BRI_DEC &kp C_BRI_INC   &kp K_VOL_DN   &kp K_VOL_UP
                                                                 &trans         &trans                            &trans         &trans
-                                                                &trans         &trans                            &trans         &trans
+                                                                &trans         &kp BSPC                          &kp BSPC       &trans
                                                                 &trans         &trans                            &trans         &trans
             >;
         };

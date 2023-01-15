@@ -17,20 +17,20 @@
 
 / {
     behaviors {
-        ctrl_bspc: tap_dance_ctrl_bspc {
+        tdbsp: tap_dance_ctrl_bspc {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MOD_TAP_CTRL_BSPC";
+            label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mt LCTRL BSPC>, <&kp BSPC>;
         };
-        lt1_del: tap_dance_lt_del {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_LT1_DEL";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&lt 1 DEL>, <&kp DEL>;
-        };
+        // lt1_del: tap_dance_lt_del {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     label = "TAP_DANCE_LT1_DEL";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&lt 1 DEL>, <&kp DEL>;
+        // };
     };
     // https://zmk.dev/docs/codes
     keymap {
@@ -44,7 +44,7 @@
 &mt LSHFT LPAR &kp Z         &kp X         &kp C         &kp V         &kp B                                                &kp N         &kp M         &kp COMMA     &kp DOT         &kp SLASH      &mt LSHFT RPAR
 &mt RALT F12   &kp F5        &kp F11       &kp F11                                                                                                      &kp F2        &kp F3          &kp F9         &kp F10
                                                                 &mt RWIN ENTER  &kp SPACE                        &kp SPACE      &mt RWIN ENTER
-                                                                &lt 1 DEL       &mt LCTRL BSPC                   &mt LCTRL BSPC &lt 1 DEL
+                                                                &lt 1 DEL       &mt LCTRL BSPC                   &tdbsp         &lt 1 DEL
                                                                 &kp RALT        &mo 2                            &mo 2          &kp RALT
             >;
         };

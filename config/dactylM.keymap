@@ -20,15 +20,22 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
             bindings = <&mt LCTRL BSPC>, <&kp BSPC>;
         };
         tdenter: tap_dance_enter {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
             bindings = <&mt RWIN ENTER>, <&kp ENTER>;
+        };
+        tddel: tap_dance_del {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_2";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&lt 1 DEL>, <&kp DEL>;
         };
     };
     // https://zmk.dev/docs/codes
@@ -43,7 +50,7 @@
 &mt LSHFT LPAR &kp Z         &kp X         &kp C         &kp V         &kp B                                                &kp N         &kp M         &kp COMMA     &kp DOT         &kp SLASH      &mt LSHFT RPAR
 &mt RALT F12   &kp F5        &kp F11       &kp F11                                                                                                      &kp F2        &kp F3          &kp F9         &kp F10
                                                                 &tdenter        &kp SPACE                        &kp SPACE      &tdenter
-                                                                &lt 1 DEL       &tdbsp                           &tdbsp         &lt 1 DEL
+                                                                &tddel          &tdbsp                           &tdbsp         &tddel
                                                                 &kp RALT        &mo 2                            &mo 2          &kp RALT
             >;
         };

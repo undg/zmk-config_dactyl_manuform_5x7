@@ -17,7 +17,10 @@
 / {
     behaviors {
         // @TODO (undg) 2023-01-15: Investigate annoying ms wait/delay in tap dance.
-        //                          I want it as follow - hold: hold KEY1; tap: press KEY2; tap-tap: hold KEY2;
+        //                          I want it as follow -
+        //                          hold: hold KEY1;
+        //                          tap: press KEY2;
+        //                          tap-tap: hold KEY2;
         tdbsp: tap_dance_bspc {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
@@ -64,7 +67,7 @@
 &trans         &trans        &kp LEFT      &kp DOWN      &kp RIGHT     &trans        &trans                 &trans          &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT       &trans         &trans
 &trans         &trans        &kp END       &trans        &kp PG_DN     &trans                                               &trans        &trans        &trans        &trans          &trans         &trans
 &trans         &trans        &trans        &trans                                                                                                       &kp C_BRI_DEC &kp C_BRI_INC   &kp K_VOL_DN   &kp K_VOL_UP
-                                                                &kp ENTER      &trans                            &trans         &kp ENTER
+                                                                &trans         &trans                            &trans         &trans
                                                                 &trans         &kp BSPC                          &kp BSPC       &trans
                                                                 &trans         &trans                            &trans         &trans
             >;

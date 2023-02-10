@@ -63,10 +63,10 @@
         move {
            bindings = <
 &trans         &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &trans                 &kp PRINTSCREEN &kp F6        &kp F7        &kp F8        &kp F9          &kp F10        &kp F11
-&trans         &trans        &kp HOME      &kp UP        &kp PG_UP     &trans        &trans                 &trans          &trans        &trans        &trans        &trans          &trans         &trans
-&trans         &trans        &kp LEFT      &kp DOWN      &kp RIGHT     &trans        &trans                 &trans          &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT       &trans         &trans
-&trans         &trans        &kp END       &trans        &kp PG_DN     &trans                                               &trans        &trans        &trans        &trans          &trans         &trans
-&trans         &trans        &trans        &trans                                                                                                       &kp C_BRI_DEC &kp C_BRI_INC   &kp K_VOL_DN   &kp K_VOL_UP
+&trans         &trans        &trans        &kp UP        &kp HOME      &trans        &trans                 &trans          &trans        &trans        &trans        &trans          &trans         &trans
+&trans         &trans        &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_UP     &trans                 &trans          &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT       &trans         &trans
+&trans         &trans        &trans        &trans        &kp END       &kp PG_DN                                            &trans        &trans        &trans        &trans          &trans         &trans
+&C_PLAY        &C_PAUSE      &C_PREV       &C_NEXT                                                                                                      &kp C_BRI_DEC &kp C_BRI_INC   &kp C_VOL_DN   &kp C_VOL_UP
                                                                 &trans         &trans                            &trans         &trans
                                                                 &trans         &kp BSPC                          &kp BSPC       &trans
                                                                 &trans         &trans                            &trans         &trans

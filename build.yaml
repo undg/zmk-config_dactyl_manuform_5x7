@@ -10,8 +10,8 @@ include:
  - board: nice_nano_v2
    shield: dactylM_left
 
- # - board: nice_nano_v2
- #   shield: dactylM_right
+ - board: nice_nano_v2
+   shield: dactylM_right
 
  # - board: nice_nano_v2
  #   shield: settings_reset

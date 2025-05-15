@@ -92,7 +92,7 @@
 &none          &none         &none         &none         &none         &none         &none                  &none           &none         &none         &none         &none           &none          &none
 &none          &none         &none         &none         &none         &none         &none                  &none           &none         &none         &none         &none           &none          &none
 &none          &none         &none         &none         &none         &none                                                &none         &none         &none         &none           &none          &none
-&bt BT_CLR     &none         &none         &none                                                                                                        &none         &none           &none          &none
+&bt BT_CLR     &none         &none         &bt BT_CLR_ALL                                                                                               &none         &none           &none          &none
                                                                 &none          &none                             &none          &none
                                                                 &none          &none                             &none          &none
                                                                 &none          &none                             &none          &none

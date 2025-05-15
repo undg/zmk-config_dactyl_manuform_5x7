@@ -2,20 +2,30 @@
 # SPDX-License-Identifier: MIT
 
 if SHIELD_DACTYLM_LEFT
+	config ZMK_KEYBOARD_NAME
+		default "Dactyl manuform"
 
-config ZMK_KEYBOARD_NAME
-	default "Dactyl manuform"
+	config ZMK_SPLIT_ROLE_CENTRAL
+		default y
 
-config ZMK_SPLIT_ROLE_CENTRAL
-	default y
-	
+endif
+
+if SHIELD_DACTYLM_RIGHT
+	config ZMK_SPLIT_ROLE_CENTRAL
+		default n
+
 endif
 
 if SHIELD_DACTYLM_LEFT || SHIELD_DACTYLM_RIGHT
 
-config ZMK_SPLIT
-	default y
+	config ZMK_SPLIT
+		default y
 
+	# report battery level for both halves
+	# config CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
+	# 	default y
+	# config CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+	# 	default y
 endif
 
 

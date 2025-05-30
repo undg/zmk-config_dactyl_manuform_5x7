@@ -3,4 +3,44 @@
 rm _fw/*
 gh run download -n firmware --dir _fw
 
+echo "Firmware Downloaded"
+echo "Double press reset button, before counter reach 0"
+
+sleep 1
+echo 10
+
+sleep 1
+echo 9
+
+sleep 1
+echo 8
+
+sleep 1
+echo 7
+
+sleep 1
+echo 6
+
+sleep 1
+echo 5
+
+sleep 1
+echo 4
+
+sleep 1
+echo 3
+
+sleep 1
+echo 2
+
+sleep 1
+echo 1
+
+sleep 1
+echo 0
+
+echo "Copy fw to left board"
+
 cp _fw/dactylM_left-nice_nano_v2-zmk.uf2 /run/media/undg/NICENANO
+
+echo "You can restart keyboard (single press  reset button)"

@@ -1,19 +1,28 @@
 #!/usr/bin/env sh
 
-# Check `bluetoothctl gatt.list-attributes` to find paths for `Battery Level`
+ALL_PATHS=$(bluetoothctl gatt.list-attributes | ag "Battery Level" -B2 | ag 'org/bluez' | awk '{$1=$1};1')
+L_ATTRIBUTES_PATH=$(echo "$ALL_PATHS" | head -n1)
+R_ATTRIBUTES_PATH=$(echo "$ALL_PATHS" | tail -n1)
 
-# bluetoothctl gatt.list-attributes | ag "Battery Level" -B3
-# Characteristic (Handle 0x0011)
-#         /org/bluez/hci0/*********************/service0010/char0011
-#         ********-****-****-****-************
-#         Battery Level
+L_KB_HEX=$(gdbus call --system --dest org.bluez --object-path $L_ATTRIBUTES_PATH --method org.bluez.GattCharacteristic1.ReadValue "{}" | sed -E 's/.*0x([0-9a-fA-F]+).*/\1/')
+R_KB_HEX=$(gdbus call --system --dest org.bluez --object-path $R_ATTRIBUTES_PATH --method org.bluez.GattCharacteristic1.ReadValue "{}" | sed -E 's/.*0x([0-9a-fA-F]+).*/\1/')
 
-MAC_ADDR=*****************
-L_KB_PATH=service0010/char0011
-R_KB_PATH=service0015/char0016
+if [[ $1 = "--ascii" ]]; then
+	echo "🅻$((16#$L_KB_HEX))% 🆁$((16#$R_KB_HEX))%"
+fi
 
-L_KB_HEX=$(gdbus call --system --dest org.bluez --object-path /org/bluez/hci0/dev_$MAC_ADDR/$L_KB_PATH --method org.bluez.GattCharacteristic1.ReadValue "{}" | sed -E 's/.*0x([0-9a-fA-F]+).*/\1/')
-R_KB_HEX=$(gdbus call --system --dest org.bluez --object-path /org/bluez/hci0/dev_$MAC_ADDR/$R_KB_PATH --method org.bluez.GattCharacteristic1.ReadValue "{}" | sed -E 's/.*0x([0-9a-fA-F]+).*/\1/')
+if [[ $1 = "--raw" ]]; then
+	echo "$((16#$L_KB_HEX)) $((16#$R_KB_HEX))"
+fi
 
-# echo "Left: $((16#$L_KB_HEX))%; Right: $((16#$R_KB_HEX))%"
-echo "Left: $((16#$L_KB_HEX))%; Right: $((16#$R_KB_HEX))%"
+if [[ $1 = "" ]]; then
+	echo "Left: $((16#$L_KB_HEX))%; Right: $((16#$R_KB_HEX))%"
+fi
+
+if [[ $1 = "-h" || $1 = "--help" ]]; then
+	echo "Usage: $0 [--ascii|--raw|-h|--help]"
+	echo "            Show battery as full text"
+	echo "  --ascii   Show battery as icons"
+	echo "  --raw     Show battery as numbers"
+	echo "  -h, --help  Show this help"
+fi
